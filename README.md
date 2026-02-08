@@ -106,12 +106,99 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000)
 
-## Database Schema
+# 🎉 Clinic Medical Management System
 
-20+ tables with full relationships:
-- `staff_profiles` - Staff members with roles
-- `patients` - Patient master data
-- `appointments` - Scheduling
+**Repository**: https://github.com/Jasonng5588/Clinic-Medical-Management-System
+
+## 🚀 项目概览
+
+完整的诊所管理系统，包含以下功能模块：
+
+### ✅ 核心功能
+- **患者管理** - 完整的CRUD操作，患者档案，病历
+- **预约管理** - 预约调度，日历视图，状态管理
+- **咨询管理** - SOAP notes，诊断，处方
+- **队列管理** - 实时队列，语音通知，优先级管理
+- **处方管理** - 药物处方，剂量，疗程
+- **发票管理** - 计费，付款，退款流程
+- **库存管理** - 药品库存，低库存警告，过期追踪
+- **员工管理** - 员工档案，排班，请假管理
+- **报告分析** - 财务报告，患者报告，预约报告（含CSV导出）
+
+### 🎨 技术栈
+- **Frontend**: Next.js 14, TypeScript, Tailwind CSS
+- **Backend**: Supabase (PostgreSQL, Auth, Storage)
+- **AI功能**: AI诊断建议（OpenAI API）
+- **实时功能**: Queue management with real-time updates
+
+---
+
+## 🔧 快速开始
+
+### 1. 克隆仓库
+```bash
+git clone https://github.com/Jasonng5588/Clinic-Medical-Management-System.git
+cd Clinic-Medical-Management-System
+```
+
+### 2. 安装依赖
+```bash
+npm install
+```
+
+### 3. 配置环境变量
+创建 `.env.local` 文件：
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+OPENAI_API_KEY=your_openai_api_key
+```
+
+### 4. 数据库设置
+在Supabase SQL Editor中运行：
+- `scripts/emergency-fix-v2.sql` ⚠️ **必须运行**
+
+### 5. 运行开发服务器
+```bash
+npm run dev
+```
+访问: http://localhost:3000
+
+---
+
+## 📁 项目结构
+
+```
+├── app/                     # Next.js App Router
+│   ├── (auth)/             # 登录/注册
+│   └── (dashboard)/        # 主要功能模块
+├── components/             # React组件
+├── lib/                    # 工具函数
+├── scripts/                # 数据库SQL脚本
+├── store/                  # 状态管理
+└── types/                  # TypeScript类型
+```
+
+---
+
+## 🎯 关键功能
+
+- 🏥 **队列管理** - 实时更新，语音通知，优先级支持
+- 📊 **报告系统** - CSV导出，统计分析
+- 🤖 **AI诊断** - GPT-4集成，症状分析
+- 👥 **多角色** - Super Admin, Doctor, Nurse, Receptionist, Accountant
+
+---
+
+## 📧 联系
+
+**作者**: Jason Ng  
+**Email**: michaelng5588@gmail.com  
+**GitHub**: https://github.com/Jasonng5588
+
+---
+
+**最后更新**: 2026年2月8日
 - `queues` - Real-time queue
 - `consultations` - Medical records
 - `prescriptions` & `prescription_items` - Medication
